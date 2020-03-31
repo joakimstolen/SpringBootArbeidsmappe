@@ -1,4 +1,6 @@
 # Specify we are working with a Java project.
 # Travis can be used also for many other languages.
 language: java
+sudo: false
+script: mvn clean verify
 
