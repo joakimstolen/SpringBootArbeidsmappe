@@ -2,26 +2,3 @@
 # Travis can be used also for many other languages.
 language: java
 
-# The JDK we need for compiling
-jdk:
-  - openjdk11
-
-# In some examples, we will use NodeJS as runtime to run JavaScript code
-node_js:
-  - node
-
-
-# mode. This is needed in Travis when using Docker
-sudo: true
-
-# As the build will download JAR files from Maven Central, optimize their storage,
-# so they do not get re-downloaded each time
-cache:
-  directories:
-    - .autoconf
-    - $HOME/.m2
-
-# The actual command we do for compiling.
-# Note: Travis has a quite limited handling of build log files, so need
-# to minimize them, ie do not be too verbose
-script: mvn clean verify --fae
