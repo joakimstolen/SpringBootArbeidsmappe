@@ -6,8 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SpringBootArbeidsmappe" />
+        <module name="frontend" />
+        <module name="backend" />
+        <module name="report" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="frontend (1)" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
