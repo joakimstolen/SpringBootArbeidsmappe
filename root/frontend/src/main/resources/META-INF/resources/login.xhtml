@@ -16,10 +16,10 @@
     <ui:define name="content">
 
         <h:form prependId="false">
-            <h:outputLabel value="Login failed: user and/or password are wrong."
-                           rendered="${!empty param['error']}"/>
-
             <div>
+                <h:outputLabel value="Login failed: user and/or password are wrong."
+                               rendered="${!empty param['error']}"/>
+
                 <h:outputText value="Username: "/>
                 <h:inputText id="username" class="login"/><br/>
                 <h:outputText value="Password: "/>
