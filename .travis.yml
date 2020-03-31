@@ -11,7 +11,6 @@ node_js:
   - node
 
 
-# "sudo" is a Linux/Bash command to execute other commands in super-user (ie "root")
 # mode. This is needed in Travis when using Docker
 sudo: true
 
