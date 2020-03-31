@@ -1,6 +1,7 @@
 package org.example.quizgame.backend.service;
 
 
+import org.example.quizgame.backend.StubApplication;
 import org.example.quizgame.backend.entity.Category;
 import org.example.quizgame.backend.entity.SubCategory;
 import org.junit.jupiter.api.Test;
@@ -13,26 +14,28 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 /**
  * Created by arcuri82 on 14-Dec-17.
  */
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
-public class CategoryServiceTest extends ServiceTestBase{
+@SpringBootTest(classes = StubApplication.class,
+        webEnvironment = SpringBootTest.WebEnvironment.NONE)
+public class CategoryServiceTest extends ServiceTestBase {
 
     @Autowired
     private CategoryService categoryService;
 
 
     @Test
-    public void testNoCategory(){
+    public void testNoCategory() {
 
         List<Category> list = categoryService.getAllCategories(false);
         assertEquals(0, list.size());
     }
 
     @Test
-    public void testCreateCategory(){
+    public void testCreateCategory() {
 
         String name = "testCreateCategory";
 
@@ -41,7 +44,7 @@ public class CategoryServiceTest extends ServiceTestBase{
     }
 
     @Test
-    public void testGetCategory(){
+    public void testGetCategory() {
 
         String name = "testGetCategory";
 
@@ -54,7 +57,7 @@ public class CategoryServiceTest extends ServiceTestBase{
 
 
     @Test
-    public void testCreateSubCategory(){
+    public void testCreateSubCategory() {
 
         String ctgName = "ctg_testCreateSubCategory";
         long ctgId = categoryService.createCategory(ctgName);
@@ -68,7 +71,7 @@ public class CategoryServiceTest extends ServiceTestBase{
     }
 
     @Test
-    public void testGetAllCategories(){
+    public void testGetAllCategories() {
 
         long a = categoryService.createCategory("a");
         long b = categoryService.createCategory("b");
@@ -92,7 +95,7 @@ public class CategoryServiceTest extends ServiceTestBase{
     }
 
     @Test
-    public void testCreateTwice(){
+    public void testCreateTwice() {
 
         String ctg = "Computer Science";
 

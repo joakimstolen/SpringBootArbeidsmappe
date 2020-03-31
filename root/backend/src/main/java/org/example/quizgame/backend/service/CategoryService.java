@@ -11,10 +11,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
+
 @Service
 @Transactional
 public class CategoryService {
-
 
     @Autowired
     private EntityManager em;
@@ -61,6 +61,7 @@ public class CategoryService {
         return categories;
     }
 
+
     public Category getCategory(long id, boolean withSub){
 
         Category category = em.find(Category.class, id);
@@ -70,6 +71,7 @@ public class CategoryService {
 
         return category;
     }
+
 
     public SubCategory getSubCategory(long id){
 

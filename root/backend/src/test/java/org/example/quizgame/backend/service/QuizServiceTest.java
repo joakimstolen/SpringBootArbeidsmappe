@@ -1,5 +1,6 @@
 package org.example.quizgame.backend.service;
 
+import org.example.quizgame.backend.StubApplication;
 import org.example.quizgame.backend.entity.Quiz;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,7 +16,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest( webEnvironment = SpringBootTest.WebEnvironment.NONE)
+@SpringBootTest(classes = StubApplication.class,
+        webEnvironment = SpringBootTest.WebEnvironment.NONE)
 public class QuizServiceTest extends ServiceTestBase{
 
     @Autowired

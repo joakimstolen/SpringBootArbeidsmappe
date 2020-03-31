@@ -10,9 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-/**
- * Created by arcuri82 on 14-Dec-17.
- */
+
 @Service
 @Transactional
 public class ResetService {

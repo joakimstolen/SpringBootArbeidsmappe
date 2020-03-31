@@ -1,5 +1,6 @@
 package org.example.quizgame.backend.service;
 
+import org.example.quizgame.backend.StubApplication;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,8 @@ import static org.springframework.test.annotation.DirtiesContext.ClassMode.BEFOR
 
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
+@SpringBootTest(classes = StubApplication.class,
+        webEnvironment = SpringBootTest.WebEnvironment.NONE)
 //Important, as referring to state given by Singleton that
 //could be modified by previous tests, as they share the same
 //SpringBoot application context (ie SpringBoot is started only

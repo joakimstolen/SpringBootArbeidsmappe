@@ -1,5 +1,6 @@
 package org.example.quizgame.backend.service;
 
+import org.example.quizgame.backend.StubApplication;
 import org.example.quizgame.backend.entity.MatchStats;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -10,7 +11,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
+@SpringBootTest(classes = StubApplication.class,
+        webEnvironment = SpringBootTest.WebEnvironment.NONE)
 public class MatchStatsServiceTest extends ServiceTestBase{
 
     @Autowired
