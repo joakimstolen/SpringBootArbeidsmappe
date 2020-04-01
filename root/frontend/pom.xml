@@ -22,9 +22,10 @@
 
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>SpringBootArbeidsmappe</artifactId>
+            <artifactId>backend</artifactId>
             <version>${project.version}</version>
         </dependency>
+
 
         <dependency>
             <groupId>javax.enterprise</groupId>

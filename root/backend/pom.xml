@@ -18,11 +18,7 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>SpringBootArbeidsmappe</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
