@@ -30,7 +30,7 @@
         <version.junit.platform>1.5.2</version.junit.platform>
         <version.jacoco>0.8.5</version.jacoco>
         <!--  FIXME version 1.4.200 breaks tests, eg in JPA-JPQL  -->
-        <version.h2>1.4.197</version.h2>
+        <version.h2>2.1.210</version.h2>
         <version.testcontainers>1.12.4</version.testcontainers>
         <version.selenium>3.141.59</version.selenium>
         <version.surefire-failsafe>3.0.0-M4</version.surefire-failsafe>
